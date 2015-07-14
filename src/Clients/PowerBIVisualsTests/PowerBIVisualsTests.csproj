@@ -2,14 +2,13 @@
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\..\PowerBIClient.props" />
   <Import Project="$(PowerBIClientBuildTargets)" />
-  
   <PropertyGroup>
-    <VisualTetstDropPath>$(InfonavScriptsDropPath)\Test</VisualTetstDropPath>  
+    <VisualTetstDropPath>$(InfonavScriptsDropPath)\Test</VisualTetstDropPath>
+    <TypeScriptToolsVersion>1.5</TypeScriptToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition="$(VisualsStandaloneBuild)">
-    <VisualTetstDropPath>$(PowerBIScriptsDropPath)\Test</VisualTetstDropPath>  
-  </PropertyGroup>  
-  
+    <VisualTetstDropPath>$(PowerBIScriptsDropPath)\Test</VisualTetstDropPath>
+  </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <ProjectGuid>{378A4333-7D33-446D-8608-8D1CCB171326}</ProjectGuid>
@@ -25,7 +24,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
     <PlatformTarget>AnyCPU</PlatformTarget>
-	<Prefer32Bit>false</Prefer32Bit>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\JsCommon\JsCommon.csproj">
@@ -94,7 +93,7 @@
     <TypeScriptCompile Include="visuals\tooltipTests.ts" />
     <TypeScriptCompile Include="visuals\treemapTests.ts" />
     <TypeScriptCompile Include="visuals\visualFactoryTests.ts" />
-    <TypeScriptCompile Include="visuals\waterfallChartTests.ts" />    
+    <TypeScriptCompile Include="visuals\waterfallChartTests.ts" />
   </ItemGroup>
   <ItemGroup Condition="!$(VisualsStandaloneBuild)">
     <TypeScriptCompile Include="visuals\bingNewsTests.ts" />

@@ -11,25 +11,26 @@
     <RootNamespace>utility</RootNamespace>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TypeScriptSourceRoot>/ts/jscommon/</TypeScriptSourceRoot>
-  </PropertyGroup>  
+    <TypeScriptToolsVersion>1.5</TypeScriptToolsVersion>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <PlatformTarget>AnyCPU</PlatformTarget>
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
     <PlatformTarget>AnyCPU</PlatformTarget>
-	<Prefer32Bit>false</Prefer32Bit>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup Condition="!$(VisualsStandaloneBuild)">
-	<TypeScriptCompile Include="Build\_references.ts" />
+    <TypeScriptCompile Include="Build\_references.ts" />
   </ItemGroup>
   <ItemGroup>
-	<TypeScriptCompile Include="typedefs\buildConstants.ts" />
-  </ItemGroup>  
-  <ItemGroup Condition="!$(VisualsStandaloneBuild)">
-	<TypeScriptCompile Include="ModernCop.ts" />
+    <TypeScriptCompile Include="typedefs\buildConstants.ts" />
   </ItemGroup>
-  <ItemGroup>    
+  <ItemGroup Condition="!$(VisualsStandaloneBuild)">
+    <TypeScriptCompile Include="ModernCop.ts" />
+  </ItemGroup>
+  <ItemGroup>
     <!-- Source files -->
     <TypeScriptCompile Include="clientError.ts" />
     <TypeScriptCompile Include="typedefs\typedefs.ts" />
@@ -54,7 +55,7 @@
     <TypeScriptCompile Include="promise.ts" />
     <TypeScriptCompile Include="Prototype.ts" />
     <TypeScriptCompile Include="QueryStringUtil.ts" />
-    <TypeScriptCompile Include="ScriptErrorInfo.ts" />    
+    <TypeScriptCompile Include="ScriptErrorInfo.ts" />
     <TypeScriptCompile Include="Strings.ts" />
     <TypeScriptCompile Include="Formatting.ts" />
     <TypeScriptCompile Include="rejectablePromiseCache.ts" />
@@ -71,20 +72,16 @@
     <TypeScriptCompile Include="Utility\Utility.ts" />
     <TypeScriptCompile Include="Utility\XmlUtility.ts" />
     <TypeScriptCompile Include="tracing\traceItem.ts" />
-    <TypeScriptCompile Include="Utility\StandaloneUtility.ts" />      
+    <TypeScriptCompile Include="Utility\StandaloneUtility.ts" />
     <TypeScriptCompile Include="tracing\trace.ts" />
-    <TypeScriptCompile Include="tracing\traceType.ts" />    
+    <TypeScriptCompile Include="tracing\traceType.ts" />
     <TypeScriptCompile Include="services\iHttpService.ts" />
-	
-	<TypeScriptCompile Include="services\dependencies.ts" />
+    <TypeScriptCompile Include="services\dependencies.ts" />
   </ItemGroup>
-
   <ItemGroup Condition="!$(VisualsStandaloneBuild)">
-	<TypeScriptCompile Include="StringBuilder.ts" />	
+    <TypeScriptCompile Include="StringBuilder.ts" />
   </ItemGroup>
-  
   <ItemGroup Condition="!$(VisualsStandaloneBuild)">
-    
     <TypeScriptCompile Include="telemetry\commonTelemetryEvents.ts" />
     <TypeScriptCompile Include="telemetry\telemetryConstants.ts" />
     <TypeScriptCompile Include="telemetry\telemetryInterfaces.ts" />
